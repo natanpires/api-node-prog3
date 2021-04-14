@@ -5,7 +5,7 @@ exports.default = routerBuilder([
   {
     method: 'get',
     path: '/:id?',
-    action: (request) => new Aulas(request.app).find(request),
+    action: (request) => new Aulas().find(request),
     middleware: (
       _req,
       _response,
@@ -17,7 +17,7 @@ exports.default = routerBuilder([
   {
     method: 'post',
     path: '/',
-    action: (request) => new Aulas(request.app).create(request),
+    action: (request) => new Aulas().create(request),
     middleware: (
       _req,
       _response,
@@ -29,7 +29,7 @@ exports.default = routerBuilder([
   {
     method: 'put',
     path: '/:id',
-    action: (request) => new Aulas(request.app).update(request),
+    action: (request) => new Aulas().update(request),
     middleware: (
       _request,
       _response,
@@ -41,7 +41,7 @@ exports.default = routerBuilder([
   {
     method: 'delete',
     path: '/:id',
-    action: (request) => new Aulas(request.app).remove(request),
+    action: (request) => new Aulas().remove(request),
     middleware: (
       _request,
       _response,
